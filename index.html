@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Notas Accesible</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="tarjeta">
+    <header class="encabezado">
+      <img src="img/logo.svg" alt="Icono de libreta de notas" class="logo">
+      <h1>Mis Notas Personales</h1>
+    </header>
+
+    <form id="form-nota" class="formulario" novalidate>
+      <fieldset>
+        <legend>Crear nueva nota</legend>
+        
+        <label for="texto">Contenido de la nota</label>
+        <input id="texto" type="text" placeholder="Ej. Comprar materiales de estudio" required autocomplete="off">
+
+        <label for="cat">Categoría</label>
+        <select id="cat" required>
+          <option value="">Selecciona una categoría</option>
+          <option value="Estudio">Estudio</option>
+          <option value="Trabajo">Trabajo</option>
+          <option value="Personal">Personal</option>
+        </select>
+
+        <button type="submit" id="add" class="boton-principal" disabled>Agregar nota</button>
+      </fieldset>
+    </form>
+
+    <section class="seccion-notas">
+      <h2>Lista de notas</h2>
+      <p id="mensaje" class="mensaje" role="status"></p>
+      <div id="lista" class="contenedor-lista"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
